@@ -1,5 +1,11 @@
 import React from 'react'
-import './product-tile.style.css'
+import {
+  ProductStyled,
+  PriceStrikeStyled,
+  PriceStyled,
+  StrikeStyled,
+  TitleStyled
+} from './product-tile.style'
 
 interface ProductTileProps {
   image: string
@@ -15,19 +21,19 @@ export const ProductTile: React.VFC<ProductTileProps> = ({
   discountPrice
 }) => {
   return (
-    <div className="product-tile">
+    <ProductStyled>
       <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <div className={'price-strike'}>
+      <TitleStyled>{title}</TitleStyled>
+      <PriceStrikeStyled>
         {discountPrice ? (
           <>
-            <span className="price">{discountPrice} zł</span>
-            <span className="strike">{price} zł</span>
+            <PriceStyled>{discountPrice} zł</PriceStyled>
+            <StrikeStyled>{price} zł</StrikeStyled>
           </>
         ) : (
-          <span className="price">{price}</span>
+          <PriceStyled>{price}</PriceStyled>
         )}
-      </div>
-    </div>
+      </PriceStrikeStyled>
+    </ProductStyled>
   )
 }
