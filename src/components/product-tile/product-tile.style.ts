@@ -3,6 +3,17 @@ import styled from 'styled-components'
 export const ProductStyled = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
+
+  padding: 5px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+  }
 `
 export const PriceStrikeStyled = styled.div`
   display: flex;

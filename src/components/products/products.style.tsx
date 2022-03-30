@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const ProductStyle = styled.div`
-  width: 100%;
+export const ProductsStyle = styled.div`
   display: grid;
-  flex-direction: row;
+  width: 100%;
   column-gap: 10px;
   row-gap: 20px;
+  grid-auto-rows: auto;
 
   @media (max-width: 767px) {
     grid-template-columns: 100%;
