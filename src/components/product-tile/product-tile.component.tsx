@@ -7,14 +7,14 @@ import {
   TitleStyled
 } from './product-tile.style'
 
-interface ProductTileProps {
+interface IProductTileProps {
   image: string
   title: string
   price: number
   discountPrice?: number
   label?: string
 }
-export const ProductTile: React.VFC<ProductTileProps> = ({
+export const ProductTile: React.VFC<IProductTileProps> = ({
   title,
   image,
   price,

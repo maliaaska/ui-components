@@ -1,16 +1,12 @@
 import React from 'react'
-import { ProductTile } from './components/product-tile/product-tile.component'
+import { Products } from './components/products/product.component'
+import { productsMock } from './mocks/products.mock'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <ProductTile
-        price={100.24}
-        discountPrice={21321}
-        image={'https://via.placeholder.com/150'}
-        title={'Lorem ipsum'}
-      />
+      <Products products={productsMock} />
     </div>
   )
 }
