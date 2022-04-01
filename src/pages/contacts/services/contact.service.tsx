@@ -2,6 +2,7 @@ export interface IContact {
   id: string
   name: string
   lastName: string
+  initials?: string
   phone?: string
   mail?: string
 }
