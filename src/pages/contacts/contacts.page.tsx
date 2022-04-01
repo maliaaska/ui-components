@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ContactsService, IContact } from './services/contact.service'
-import { ContactTile } from './components/contact/contact.component'
-import { ContactsWrapperStyled } from './components/contact/contact.style'
+import { ContactList } from './components/contact-list/contact-list.component'
+import { ContactPageStyled } from './contacts.style'
 
 export const ContactsPage: React.VFC = () => {
   const [contacts, setContact] = useState<IContact[]>([])
@@ -14,10 +14,8 @@ export const ContactsPage: React.VFC = () => {
   }, [])
 
   return (
-    <ContactsWrapperStyled>
-      {contacts?.map((contact) => (
-        <ContactTile key={contact.id} contact={contact} />
-      ))}
-    </ContactsWrapperStyled>
+    <ContactPageStyled>
+      <ContactList contacts={contacts} />
+    </ContactPageStyled>
   )
 }
