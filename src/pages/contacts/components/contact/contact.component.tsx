@@ -13,12 +13,19 @@ interface IContactTileProps {
 }
 
 export const ContactTile: React.VFC<IContactTileProps> = ({ contact }) => {
-  const { name, phone, mail } = contact
+  const { name, lastName, phone, mail } = contact
 
+  // const nameInitial = () => {
+  //   contact.name.indexOf(initial(, 0 ))
+  // }
   return (
     <ContactsWrapperStyled>
       <ContactWrapperStyled>
-        <ContactNameStyled>{name}</ContactNameStyled>
+        <ContactNameStyled>
+          {name}
+          <br />
+          {lastName}
+        </ContactNameStyled>
         <ContactDataStyled>
           <ContactPhoneStyled>{phone}</ContactPhoneStyled>
           <ContactMailStyled>{mail}</ContactMailStyled>

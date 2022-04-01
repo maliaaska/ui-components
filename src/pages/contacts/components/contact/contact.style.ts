@@ -7,6 +7,7 @@ export const ContactsWrapperStyled = styled.div`
   margin: 5% 0 0 5%;
   padding: 5px;
   background-color: azure;
+
   @media (max-width: 767px) {
   }
 
@@ -22,11 +23,11 @@ export const ContactWrapperStyled = styled.div`
   margin-left: 5%;
 `
 export const ContactNameStyled = styled.div`
-  min-width: 50%;
+  min-width: 25%;
 `
 export const ContactDataStyled = styled.div`
   margin-left: 5%;
 `
-
 export const ContactPhoneStyled = styled.div``
+
 export const ContactMailStyled = styled.div``
