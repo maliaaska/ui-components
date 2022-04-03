@@ -21,7 +21,11 @@ export class ContactsService {
 
   public static addNewContact(contact: NewContact): Promise<void> {
     return new Promise((success, fail) => {
-      fetch('http://localhost:3500/contacts', { method: 'post', body: JSON.stringify(contact) })
+      fetch('http://localhost:3500/contacts', {
+        method: 'post',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(contact)
+      })
         .then(() => success())
         .catch(fail)
     })
