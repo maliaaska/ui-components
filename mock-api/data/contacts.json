@@ -1,1 +1,12 @@
-[]
+{
+    "contacts": [
+        {
+            "id": "9604ad99-4da1-4ec7-bcb6-37a6d9a3e05e",
+            "name": "Marry Elishabet",
+            "lastname": "Jane",
+            "mail": "marry.jane@gmail.com",
+            "phone": ""
+        }
+
+    ]
+}
