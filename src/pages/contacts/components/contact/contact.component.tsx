@@ -15,14 +15,14 @@ interface IContactTileProps {
 }
 
 export const ContactTile: React.VFC<IContactTileProps> = ({ contact }) => {
-  const { name, lastName, phone, mail } = contact
+  const { name, lastname, phone, mail } = contact
 
   return (
     <ContactWrapperStyled>
-      <ImageStyled>{getInitials(name, lastName)}</ImageStyled>
+      <ImageStyled>{getInitials(name, lastname)}</ImageStyled>
       <ContactDataStyled>
         <ContactNameStyled>
-          {name} {lastName}
+          {name} {lastname}
         </ContactNameStyled>
         <ContactPhoneStyled>{phone}</ContactPhoneStyled>
         <ContactMailStyled>{mail}</ContactMailStyled>

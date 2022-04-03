@@ -1,7 +1,9 @@
+import { NewContact } from '../components/add-new-contact-from/add-new-contact-from.component'
+
 export interface IContact {
   id: string
   name: string
-  lastName: string
+  lastname: string
   initials?: string
   phone?: string
   mail?: string
@@ -13,6 +15,14 @@ export class ContactsService {
       fetch('http://localhost:3500/contacts')
         .then((resp) => resp.json() as unknown as IContact[])
         .then(success)
+        .catch(fail)
+    })
+  }
+
+  public static addNewContact(contact: NewContact): Promise<void> {
+    return new Promise((success, fail) => {
+      fetch('http://localhost:3500/contacts', { method: 'post', body: JSON.stringify(contact) })
+        .then(() => success())
         .catch(fail)
     })
   }
