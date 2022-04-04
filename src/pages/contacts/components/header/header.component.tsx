@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderStyled } from './header.style'
+import { HeaderStyled, HeaderLeftBox, HeaderRightBox } from './header.style'
 
 interface IHeaderProps {
   onAddNewContact?: () => void
@@ -8,7 +8,14 @@ interface IHeaderProps {
 export const Header: React.VFC<IHeaderProps> = ({ onAddNewContact }) => {
   return (
     <HeaderStyled>
-      <button onClick={onAddNewContact}>Add new Contact</button>
+      <HeaderLeftBox>
+        <h1>Contacts</h1>
+      </HeaderLeftBox>
+      <HeaderRightBox>
+        <div>
+          <button onClick={onAddNewContact}>Add new Contact</button>
+        </div>
+      </HeaderRightBox>
     </HeaderStyled>
   )
 }
